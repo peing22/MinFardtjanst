@@ -1,0 +1,1136 @@
+/* Importerar en normaliseringsmall */
+@import url(normalize.css);
+
+/* Teckenstorlek för rot-elementet (1em = 10px) */
+html {
+    font-size: 62.5%;
+}
+
+/* Reglerar alla boxar till border-box */
+* {
+    box-sizing: border-box;
+}
+
+/* Hela webbsidan */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #D0DFE7;
+}
+
+/* Ändrar fokusfärg */
+a:focus,
+button:focus,
+input:focus,
+select:focus {
+    outline-color: #962070;
+}
+
+/* Sidhuvud */
+header {
+    height: 60px;
+    width: 100%;
+    background-color: #003E6A;
+    color: white;
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.4rem;
+}
+
+/* Logotyp */
+#logo {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+/* Döljer sökfält i mobilversion */
+header form {
+    display: none;
+}
+
+/* Öppna meny-knapp */
+#open-menu-btn {
+    background-color: #003E6A;
+    border: none;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+#open-menu-btn:hover {
+    background-color: #227CB0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Öppna meny-ikonen */
+.fa-bars {
+    font-size: 3.8rem;
+    padding-left: 10px;
+}
+
+/* Navigerinsmeny */
+header nav {
+    background-color: #003E6A;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 398px;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: none;
+    z-index: 1;
+}
+
+/* Stäng meny-knapp */
+#close-menu-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background-color: #003E6A;
+    border: none;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 5px 13px;
+    transition: 0.3s;
+}
+
+#close-menu-btn:hover {
+    background-color: #227CB0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Stäng meny-ikonen */
+.fa-xmark {
+    font-size: 3.8rem;
+    padding-left: 10px;
+}
+
+/* Navigeringslänkarna */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 32px;
+}
+
+header nav li {
+    width: 90%;
+    margin: auto;
+    transition: 0.3s;
+}
+
+header nav a {
+    display: block;
+    padding: 20px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+header nav li:hover {
+    background-color: #227CB0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Logga ut-ikonen */
+.fa-right-from-bracket {
+    padding-left: 10px;
+}
+
+/* Bakgrundsbilden */
+#road img {
+    width: 100%;
+    height: auto;
+}
+
+/* Huvudrubrik */
+h1 {
+    font-size: 2.4rem;
+    background-color: #003E6A;
+    color: white;
+    margin: 0;
+    font-weight: 500;
+    padding: 15px 20px;
+    position: relative;
+    top: -3px;
+}
+
+/* Sekundär navigeringsmeny på startsidan */
+.sub-menu ul {
+    list-style-type: none;
+    padding: 0 20px;
+}
+
+.sub-menu a {
+    text-decoration: none;
+}
+
+.sub-menu h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #227CB0;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.sub-menu a:hover {
+    text-decoration: underline;
+    color: #003E6A;
+}
+
+/* Beskrivande text döljs */
+.descriptive-text {
+    font-size: 1.6rem;
+    display: none;
+}
+
+/* Positionerar allt innehåll för att footern ska stanna längst ner */
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Lägger till padding för att innehållet inte ska hamna bakom footern */
+#content-wrap {
+    padding-bottom: 160px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: fit-content;
+    background-color: #003E6A;
+    color: white;
+    padding: 0 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+footer li {
+    font-weight: 400;
+    font-size: 1.6rem;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.fa-li {
+    font-size: 2rem;
+    padding-left: 18px;
+}
+
+footer a {
+    color: white;
+    padding-left: 5px;
+}
+
+/* Brödsmulor */
+.breadcrumbs {
+    position: absolute;
+    top: 58px;
+    left: 12px;
+    background-color: white;
+    width: fit-content;
+    max-width: 93%;
+    padding: 5px 9px 3px;
+    border-radius: 5px;
+    list-style: none;
+    font-size: 1.6rem;
+}
+
+.breadcrumbs li {
+    display: inline;
+}
+
+.breadcrumbs li+li:before {
+    padding: 4px;
+    padding-right: 8px;
+    content: ">";
+    font-weight: 500;
+}
+
+.fa-house {
+    padding-right: 6px;
+    color: #227CB0;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs #current-page {
+    font-weight: 700;
+}
+
+/* Innehåll under h1 på sidor utöver startsidan */
+.sub-content {
+    background-color: white;
+    color: #333333;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* Gör visst innehåll fetare */
+.heavy {
+    font-weight: 500;
+}
+
+/* Justerar adress- och datumfält */
+input[type=text],
+input[type=date] {
+    width: 100%;
+    height: 31px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+input[type=time] {
+    height: 31px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 3px 5px;
+    margin-top: 3px;
+}
+
+/* Ikoner */
+#time-info i,
+.fa-location-dot,
+.fa-calendar-days,
+.fa-clock {
+    color: #227CB0;
+    padding-right: 8px;
+    font-size: 2rem;
+}
+
+.fa-clock {
+    position: relative;
+    top: 1px;
+}
+
+/* Info-ikon */
+#time-info i {
+    color: #003E6A;
+    position: relative;
+    top: 2px;
+}
+
+/* Förminskar text */
+#time-info {
+    font-size: 1.4rem;
+}
+
+/* Lägg till återresa-knapp */
+#toggle-return-text {
+    width: 100%;
+    height: 40px;
+    background-color: #227CB0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 10px #003E6A inset, 0 0 2px #003E6A inset;
+}
+
+#toggle-return-text:hover {
+    background-color: #003E6A;
+}
+
+#trip-back {
+    margin-bottom: 20px;
+}
+
+/* Krav på resa */
+fieldset {
+    border: 1px solid #333333;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+legend {
+    padding: 0 5px;
+}
+
+input[type=checkbox] {
+    border: 1px solid #333333;
+    border-radius: 5px;
+}
+
+/* Upprepa denna resa */
+#iterate {
+    width: 100%;
+    height: 31px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 3px;
+}
+
+/* Boka resa-knapp */
+#make-this-booking {
+    width: 100%;
+    height: 56px;
+    background-color: #227CB0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 2.2rem;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 10px #003E6A inset, 0 0 2px #003E6A inset;
+}
+
+#make-this-booking:hover {
+    background-color: #003E6A;
+}
+
+#make-this-booking i {
+    padding-left: 8px;
+}
+
+/* Bokningsbekräftelsetext */
+.first-confirm-p {
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.last-confirm-p {
+    margin-bottom: 0;
+}
+
+.last-confirm-p a {
+    color: #333333;
+}
+
+/* Mina bokade resor */
+.bookedtrips-first-p {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #003E6A;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.bookedtrips-next-p {
+    margin: 0;
+    line-height: 26px;
+}
+
+.bookedtrips-last-p {
+    margin: 0;
+}
+
+/* Ändra resa och avboka resa-knappar */
+.bookedtrips-btn {
+    width: 100%;
+    background-color: #227CB0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 1.8rem;
+    margin-top: 12px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #003E6A inset, 0 0 2px #003E6A inset;
+}
+
+.bookedtrips-btn:hover {
+    background-color: #003E6A;
+    cursor: pointer;
+}
+
+.bookedtrips-btn i {
+    padding-left: 8px;
+}
+
+/* Skriv ut översikt-knapp */
+.print-btn {
+    padding: 0;
+}
+
+#print-btn {
+    width: 100%;
+    height: 56px;
+    font-size: 2.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #227CB0;
+    color: white;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #003E6A inset, 0 0 2px #003E6A inset;
+}
+
+#print-btn:hover {
+    background-color: #003E6A;
+    cursor: pointer;
+}
+
+#print-btn i {
+    padding-left: 8px;
+}
+
+/* Flyttar ner Lägg till återresa-knapp under ändra resa */
+.toggle-change {
+    margin-top: 20px;
+}
+
+/* Placeholderfärg */
+::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+/* Text för "Är du säker på att du vill avboka..." */
+#r-u-sure {
+    font-weight: 700;
+    margin-top: 0;
+}
+
+/* Knappar för avbokning */
+.r-u-sure-btn {
+    margin-top: 15px;
+    height: 56px;
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+/* Textinnehåll på infosidan */
+.first-p {
+    font-weight: 500;
+    margin-top: 0;
+    line-height: 26px;
+}
+
+.h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #227CB0;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    line-height: 26px;
+}
+
+.next-p {
+    margin-top: 0;
+    line-height: 26px;
+}
+
+.first-p a,
+.next-p a {
+    color: #333333;
+}
+
+#before-ul {
+    margin-bottom: 0;
+}
+
+#info-ul {
+    margin-top: 0;
+    line-height: 26px;
+}
+
+.info-last-p {
+    margin-bottom: 0;
+}
+
+/* Sista fetmarkerade texten på sidan om tillgänglighet */
+.fat-p {
+    font-weight: 500;
+}
+
+/* Startsidans ikoner (flyttas till sist i koden för att inte info-ikonen ska skrivas över) */
+.sub-menu-icons {
+    padding-right: 10px;
+    color: #003E6A;
+}
+
+/* MEDIA QUERIES */
+
+/* Skärmar med en bredd på 601-1023px */
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+
+    /* Bakgrundsbild */
+    body {
+        background: url(images/road1024x576.jpg) no-repeat center fixed;
+        background-size: cover;
+    }
+
+    /* Navigerinsmeny */
+    header nav {
+        height: 417px;
+        width: 443px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 0px 0px 0px 5px;
+    }
+
+    /* Navigeringslänkarna */
+    header nav a {
+        font-size: 2.4rem;
+    }
+
+    /* Logga ut-ikonen */
+    .fa-right-from-bracket {
+        padding-left: 15px;
+    }
+
+    /* Bilden döljs */
+    #road img {
+        display: none;
+    }
+
+    /* Huvudinnehåll på sidorna */
+    .sub-menu,
+    .content {
+        width: 486px;
+        margin: auto;
+        margin-top: 12vh;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    /* Huvudrubrik */
+    h1 {
+        font-size: 3.2rem;
+        padding: 25px 36px;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    /* Sekundär navigeringsmeny på startsidan */
+    .sub-menu ul {
+        padding: 0;
+    }
+
+    .sub-menu h2 {
+        font-size: 2.4rem;
+        padding: 30px 0 10px 36px;
+        margin: 0;
+    }
+
+    .sub-menu-icons {
+        padding-right: 15px;
+    }
+
+    /* Beskrivande text visas */
+    .descriptive-text {
+        display: block;
+        background-color: white;
+        color: #333333;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 0 36px;
+        margin: 0;
+    }
+
+    /* Lägger till padding under sista stycket på startsidan */
+    .last-p {
+        padding-bottom: 36px;
+        border-radius: 5px;
+    }
+
+    /* Boka resa-knapp */
+    #make-this-booking {
+        margin-bottom: 20px;
+    }
+
+    /* Bokningsbekräftelsetext */
+    .last-confirm-p {
+        margin-bottom: 21px;
+    }
+
+    /* Mina bokade resor */
+    .section-bookedtrips {
+        border: 1px solid #333333;
+    }
+
+    #bookedtrips {
+        padding-bottom: 1px;
+    }
+
+    /* Knappar för avbokning */
+    .r-u-sure-btn {
+        margin-top: 25px;
+    }
+
+    /* Textinnehåll på infosidan */
+    .first-p,
+    .next-p {
+        font-size: 1.8rem;
+        line-height: 28px;
+    }
+
+    .h2 {
+        font-size: 2.4rem;
+        margin-top: 30px;
+        line-height: 28px;
+    }
+
+    #info-ul {
+        font-size: 1.8rem;
+        line-height: 28px;
+    }
+
+    .info-last-p {
+        margin-bottom: 12px;
+    }
+}
+
+/* Skärmar med minsta bredd 1024px */
+@media only screen and (min-width: 1024px) {
+
+    /* Bakgrundsbild */
+    body {
+        background: url(images/road1920x1080.jpg) no-repeat center fixed;
+        background-size: cover;
+    }
+
+    /* Visar sökfält */
+    header form {
+        display: block;
+        margin-top: 19.5px;
+    }
+
+    /* Sökfält */
+    #label-search {
+        font-weight: 500;
+    }
+
+    #search {
+        height: 35px;
+        width: 248px;
+        padding: 2px 8px;
+        margin-left: 5px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1.8rem;
+        background-color: white;
+    }
+
+    .fa-magnifying-glass {
+        background-color: white;
+        color: #227CB0;
+        position: relative;
+        font-size: 1.8rem;
+        top: 1px;
+        left: -30px;
+    }
+
+    /* Navigerinsmeny */
+    header nav {
+        height: 417px;
+        width: 443px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 0px 0px 0px 5px;
+    }
+
+    /* Navigeringslänkarna */
+    header nav a {
+        font-size: 2.4rem;
+    }
+
+    /* Logga ut-ikonen */
+    .fa-right-from-bracket {
+        padding-left: 15px;
+    }
+
+    /* Bilden döljs */
+    #road img {
+        display: none;
+    }
+
+    /* Huvudinnehåll på sidorna */
+    .sub-menu,
+    .content {
+        width: 900px;
+        margin: auto;
+        margin-top: 15vh;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    /* Huvudrubrik */
+    h1 {
+        font-size: 3.2rem;
+        padding: 25px 36px;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    /* CSS Grids för startsidan */
+    .grid-container {
+        width: 900px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    /* Sekundär navigeringsmeny på startsidan */
+    .sub-menu ul {
+        padding: 0;
+    }
+
+    .sub-menu h2 {
+        font-size: 2.4rem;
+        padding: 30px 0 10px 36px;
+        margin: 0 2px 2px 0;
+    }
+
+    /* Beskrivande text visas */
+    .descriptive-text {
+        display: block;
+        background-color: white;
+        color: #333333;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 0;
+        padding-left: 36px;
+        margin: 0 2px 2px 0;
+    }
+
+    /* Lägger till padding under de två sista styckena */
+    .bottom-p {
+        padding-bottom: 36px;
+        border-radius: 5px;
+    }
+
+    /* Footer */
+    .fa-ul {
+        text-align: center;
+    }
+
+    /* Placerar listelementen horisontellt */
+    footer li {
+        display: inline-block;
+        margin: 0 1.6%;
+    }
+
+    /* CSS Grids för bokningssidan */
+    #grid-container-booking {
+        width: 900px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 48% 48%;
+        column-gap: 4%;
+    }
+
+    /* Från adress */
+    #item1 {
+        grid-area: 1/1/2/2;
+    }
+
+    /* Till adress */
+    #item2 {
+        grid-area: 1/2/2/3;
+    }
+
+    /* Datum */
+    #item3 {
+        grid-area: 2/1/3/2;
+    }
+
+    /* Klockan och info */
+    #item4 {
+        grid-area: 3/1/4/2;
+        margin-bottom: 18px;
+    }
+
+    /* Återresa-knapp */
+    #item5 {
+        grid-area: 2/2/3/3;
+    }
+
+    /* Åtterresa synlig */
+    #trip-back {
+        grid-area: 3/2/4/3;
+    }
+
+    /* Krav på resa */
+    #item7 {
+        grid-area: 4/1/5/2;
+        margin-bottom: 0;
+    }
+
+    /* Upprepa resa och boka resa-knapp */
+    #item8 {
+        grid-area: 4/2/5/3;
+    }
+
+    /* Innehåll under h1 på sidor utöver startsidan */
+    .sub-content {
+        margin: 0;
+        padding: 36px;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    /* Gör visst innehåll tunnare */
+    .heavy {
+        font-weight: 400;
+    }
+
+    /* Justerar adress- och datumfält */
+    input[type=text],
+    input[type=date] {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        height: 40px;
+        font-size: 1.8rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Justerar tidsfält */
+    input[type=time] {
+        height: 40px;
+        font-size: 1.8rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Ikoner */
+    #time-info i,
+    .fa-location-dot,
+    .fa-calendar-days,
+    .fa-clock {
+        padding-right: 10px;
+        font-size: 2.4rem;
+    }
+
+    /* Förminskar text */
+    #time-info,
+    fieldset label,
+    #iterate {
+        font-size: 1.6rem;
+    }
+
+    /* Lägg till återresa-knapp */
+    #toggle-return-text {
+        height: 40px;
+        margin-top: 34px;
+    }
+
+    /* Krav på resa */
+    legend {
+        padding: 0 10px;
+    }
+
+    /* Upprepa denna resa */
+    #iterate {
+        height: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    /* Boka resa-knapp */
+    #make-this-booking {
+        font-size: 2.4rem;
+    }
+
+    #make-this-booking i {
+        padding-left: 10px;
+    }
+
+    /* Bokningsbekräftelsetext */
+    .last-confirm-p {
+        line-height: 26px;
+        padding-right: 80px;
+    }
+
+    /* Mina bokade resor + CSS Grids */
+    .section-bookedtrips {
+        border: 1px solid #333333;
+        margin: 36px;
+        display: grid;
+        grid-template-columns: 60% 36%;
+        column-gap: 4%;
+    }
+
+    /* Mina bokade resor */
+    .bookedtrips-first-p {
+        font-size: 2rem;
+    }
+
+    .bookedtrips-next-p,
+    .bookedtrips-last-p {
+        line-height: 30px;
+    }
+
+    /* Ändra resa och avboka resa-knappar */
+    .bookedtrips-btn {
+        font-size: 2rem;
+        margin-top: 18px;
+    }
+
+    /* Skriv ut översikt-knapp */
+    .print-btn {
+        padding: 0 36px 36px;
+    }
+
+    #print-btn {
+        font-size: 2.4rem;
+    }
+
+    /* Är du säker-text */
+    #r-u-sure {
+        font-size: 2rem;
+        padding-bottom: 20px;
+    }
+
+    /* CSS Grids för Avboka resa */
+    .cancel-grids {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        column-gap: 4%;
+    }
+
+    /* Knappar för avbokning */
+    .r-u-sure-btn {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .last-r-u-sure-btn {
+        margin-bottom: 0;
+    }
+
+    /* Textinnehåll på infosidan */
+    .first-p,
+    .next-p {
+        font-size: 2.2rem;
+        line-height: 30px;
+    }
+
+    .h2 {
+        font-size: 2.4rem;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    #info-ul {
+        margin-top: 10px;
+        font-size: 2.2rem;
+        line-height: 30px;
+    }
+
+    /* Startsidans ikoner (flyttas till sist i koden för att inte info-ikonen ska skrivas över) */
+    .sub-menu-icons {
+        padding-right: 15px;
+    }
+}
+
+/* Vid mörkt tema */
+@media (prefers-color-scheme: dark) {
+
+    body,
+    .sub-menu,
+    .content,
+    .sub-menu h2,
+    .breadcrumbs,
+    .descriptive-text,
+    .sub-content,
+    input[type=text],
+    input[type=date],
+    input[type=time],
+    #iterate,
+    #search,
+    .fa-magnifying-glass {
+        background-color: #003E6A;
+    }
+
+    a:focus,
+    button:focus,
+    input:focus,
+    select:focus {
+        outline-color: white;
+    }
+
+    h1,
+    #print-btn {
+        background-color: #227CB0;
+    }
+
+    #search,
+    .fa-magnifying-glass,
+    .sub-menu h2,
+    .sub-menu-icons,
+    .breadcrumbs,
+    .breadcrumbs a,
+    .descriptive-text,
+    .h2,
+    .sub-content,
+    .fa-circle-info,
+    .fa-location-dot,
+    .fa-calendar-days,
+    .fa-clock,
+    .fa-circle-info,
+    .fa-house,
+    input[type=text],
+    input[type=date],
+    input[type=time],
+    #iterate,
+    .last-confirm-p a,
+    .bookedtrips-first-p,
+    ::placeholder,
+    .first-p a,
+    .next-p a {
+        color: white;
+    }
+
+    .sub-menu a:hover {
+        text-decoration: underline;
+        color: white;
+    }
+
+    #search,
+    input[type=text],
+    input[type=date],
+    input[type=time],
+    fieldset,
+    #iterate,
+    .section-bookedtrips {
+        border: 1px solid white;
+    }
+
+    #toggle-return-text,
+    #make-this-booking,
+    .bookedtrips-btn,
+    #print-btn {
+        box-shadow: 0 0 10px #1a6895 inset, 0 0 5px #1a6895 inset;
+    }
+
+    #toggle-return-text:hover,
+    #make-this-booking:hover,
+    .bookedtrips-btn:hover,
+    #print-btn:hover {
+        background-color: #1a6895;
+    }
+}

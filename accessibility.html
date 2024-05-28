@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tillgänglighetsredogörelse</title>
+    <!-- Länkar in favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Länkar in style.css -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Länkar in teckensnitt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Länkar in ikon-kit -->
+    <script src="https://kit.fontawesome.com/b074591ff2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <!-- Sidhuvud -->
+            <header>
+                <!-- Logotyp -->
+                <a href="index.html" id="logo">
+                    <img src="images/logotyp.svg" alt="Logotyp för Min Färdtjänst" width="154" height="42">
+                </a>
+                <!-- Sökfält -->
+                <form action="#">
+                    <label for="search" id="label-search">Sök</label>
+                    <input type="text" id="search" name="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </form>
+                <!-- Knapp för att öppna hamburgermeny + WAI-ARIA -->
+                <button id="open-menu-btn" aria-expanded="false" aria-controls="nav-menu">Meny<i
+                        class="fa-solid fa-bars"></i></button>
+                <!-- Navigeringsmeny -->
+                <nav id="nav-menu">
+                    <!-- Stäng-knapp som visas om menyn är utfälld -->
+                    <button id="close-menu-btn">Stäng<i class="fa-solid fa-xmark"></i></button>
+                    <!-- Navigeringslänkar -->
+                    <ul>
+                        <li><a href="booking.html">Boka resa</a></li>
+                        <li><a href="bookedtrips.html">Mina bokade resor</a></li>
+                        <li><a href="info.html">Information om färdtjänst</a></li>
+                        <li><a href="accessibility.html">Tillgänglighetsredogörelse</a></li>
+                        <li><a href="index.html">Logga ut<i class="fa-solid fa-right-from-bracket"></i></a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- Brödsmulor -->
+            <nav aria-label="breadcrumb">
+                <ul class="breadcrumbs">
+                    <li><i class="fa-solid fa-house"></i><a href="index.html">Start</a></li>
+                    <li id="current-page">Tillgänglighetsredogörelse</li>
+                </ul>
+            </nav>
+            <!-- Huvudinnehåll -->
+            <main>
+                <!-- Bild -->
+                <picture id="road">
+                    <source type="image/webp" srcset="images/road600x338.webp" width="600" height="338">
+                    <img src="images/road600x338.jpg" alt="Landsväg i solnedgång" width="600" height="338">
+                </picture>
+                <!-- Tillgänglighetstedogörelse -->
+                <article class="content">
+                    <h1>Tillgänglighet för Min Färdtjänst</h1>
+                    <div class="sub-content">
+                        <p class="first-p">Örebro kommun står bakom denna webb&shy;plats. Vi vill att så många som
+                            möjligt ska kunna använda den. På denna webb&shy;sida beskriver vi hur Min Färdtjänst
+                            upp&shy;fyller <a
+                                href="https://www.digg.se/analys-och-uppfoljning/lagen-om-tillganglighet-till-digital-offentlig-service-dos-lagen/om-lagen"
+                                target="_blank">lagen
+                                om till&shy;gänglig&shy;het till digital offentlig service</a>,
+                            eventuella kända till&shy;gänglig&shy;hets&shy;problem och hur du kan rapportera
+                            brister till oss så att vi kan åt&shy;gärda dem.</p>
+                        <section>
+                            <h2 class="h2">Hur tillgänglig är webb&shy;platsen?</h2>
+                            <p class="next-p">Denna webb&shy;plats är förenlig med lagen om
+                                till&shy;gänglig&shy;het
+                                till digital offentlig service och har inga kända brister i till&shy;gänglig&shy;het.
+                            </p>
+                        </section>
+                        <section>
+                            <h2 class="h2">Rapportera brister i webb&shy;platsens till&shy;gänglig&shy;het</h2>
+                            <p class="next-p">Vi strävar efter hög till&shy;gänglig&shy;het på denna webb&shy;plats.
+                                Om du upp&shy;täcker till&shy;gänglig&shy;hets&shy;problem eller om du
+                                anser att vi inte upp&shy;fyller lagens krav, <a
+                                    href="mailto:minfardtjanst@orebro.se">meddela oss via mejl</a> så att vi
+                                får veta att problemet finns.</p>
+                        </section>
+                        <section>
+                            <h2 class="h2">Tillsyn</h2>
+                            <p class="next-p">Myndigheten för digital förvaltning har ansvaret för till&shy;syn över
+                                lagen om till&shy;gänglig&shy;het till digital offentlig service. Om du inte är nöjd med
+                                hur vi hanterar dina syn&shy;punkter kan du <a href="https://www.digg.se/tdosanmalan"
+                                    target="_blank">anmäla det till Myndigheten för digital
+                                    förvaltning</a>.</p>
+                        </section>
+                        <section>
+                            <h2 class="h2">Om du inte kan använda delar av webb&shy;platsen</h2>
+                            <p class="next-p">Om du behöver innehåll från Min Färd&shy;tjänst som inte är
+                                till&shy;gängligt för dig kan du ringa kund&shy;tjänst på
+                                019-21
+                                00 00 helg&shy;fria vardagar mellan klockan 08.00-17.00 eller skicka ett mejl till <a
+                                    href="mailto:minfardtjanst@orebro.se">minfardtjanst@orebro.se</a>.
+                            </p>
+                            <p class="next-p">Vi kommer att besvara ditt mejl inom en helg&shy;fri vardag och
+                                på&shy;börja ditt ärende så fort som
+                                möjligt.
+                            </p>
+                        </section>
+                        <section>
+                            <h2 class="h2">Hur vi testat webb&shy;platsen</h2>
+                            <p class="next-p">Vi har gjort en själv&shy;skattning (intern testning) av Min Färdtjänst.
+                                Senaste bedömningen gjordes den 27 december 2022.</p>
+                        </section>
+                        <p class="next-p fat-p">Webbplatsen publicerades den 3 januari 2023.</p>
+                        <p class="next-p info-last-p fat-p">Redogörelsen uppdaterades senast den 3 januari 2023.</p>
+                    </div>
+                </article>
+            </main>
+        </div>
+        <!-- Sidfot -->
+        <footer>
+            <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-solid fa-phone"></i></span>Kundtjänst: 019-21 00 00</li>
+                <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span>E-post:<a
+                        href="mailto:petra.ingemarsson@gmail.com">minfardtjanst@orebro.se</a></li>
+                <li><span class="fa-li"><i class="fa-solid fa-gear"></i></span>Ansvarig för webbplatsen: Örebro kommun
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

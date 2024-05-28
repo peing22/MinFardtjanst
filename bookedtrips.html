@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mina bokade resor</title>
+    <!-- Länkar in favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Länkar in style.css -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Länkar in teckensnitt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Länkar in ikon-kit -->
+    <script src="https://kit.fontawesome.com/b074591ff2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <!-- Sidhuvud -->
+            <header>
+                <!-- Logotyp -->
+                <a href="index.html" id="logo">
+                    <img src="images/logotyp.svg" alt="Logotyp för Min Färdtjänst" width="154" height="42">
+                </a>
+                <!-- Sökfält -->
+                <form action="#">
+                    <label for="search" id="label-search">Sök</label>
+                    <input type="text" id="search" name="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </form>
+                <!-- Knapp för att öppna hamburgermeny + WAI-ARIA -->
+                <button id="open-menu-btn" aria-expanded="false" aria-controls="nav-menu">Meny<i
+                        class="fa-solid fa-bars"></i></button>
+                <!-- Navigeringsmeny -->
+                <nav id="nav-menu">
+                    <!-- Stäng-knapp som visas om menyn är utfälld -->
+                    <button id="close-menu-btn">Stäng<i class="fa-solid fa-xmark"></i></button>
+                    <!-- Navigeringslänkar -->
+                    <ul>
+                        <li><a href="booking.html">Boka resa</a></li>
+                        <li><a href="bookedtrips.html">Mina bokade resor</a></li>
+                        <li><a href="info.html">Information om färdtjänst</a></li>
+                        <li><a href="accessibility.html">Tillgänglighetsredogörelse</a></li>
+                        <li><a href="index.html">Logga ut<i class="fa-solid fa-right-from-bracket"></i></a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- Brödsmulor -->
+            <nav aria-label="breadcrumb">
+                <ul class="breadcrumbs">
+                    <li><i class="fa-solid fa-house"></i><a href="index.html">Start</a></li>
+                    <li id="current-page">Mina bokade resor</li>
+                </ul>
+            </nav>
+            <!-- Huvudinnehåll -->
+            <main>
+                <!-- Bild -->
+                <picture id="road">
+                    <source type="image/webp" srcset="images/road600x338.webp" width="600" height="338">
+                    <img src="images/road600x338.jpg" alt="Landsväg i solnedgång" width="600" height="338">
+                </picture>
+                <!-- Bokningsbekräftelse -->
+                <section class="content" id="bookedtrips">
+                    <h1>Mina bokade resor</h1>
+                    <section class="sub-content section-bookedtrips">
+                        <div>
+                            <h2 class="bookedtrips-first-p">2023-01-16 klockan 10:00</h2>
+                            <p class="bookedtrips-next-p">Från: Paprikagatan 18, Örebro</p>
+                            <p class="bookedtrips-next-p">Till: Nygatan 10, Örebro</p>
+                            <p class="bookedtrips-last-p">Krav på resan: Plats att ta med rollator</p>
+                        </div>
+                        <div>
+                            <button onclick="window.location.href='changetrip.html'" class="bookedtrips-btn">Ändra
+                                resa<i class="fa-solid fa-rotate"></i></button>
+                            <button onclick="window.location.href='canceltrip.html'" class="bookedtrips-btn">Avboka
+                                resa<i class="fa-regular fa-trash-can"></i></button>
+                        </div>
+                    </section>
+                    <section class="sub-content section-bookedtrips">
+                        <div>
+                            <h2 class="bookedtrips-first-p">2023-01-16 klockan 13:00</h2>
+                            <p class="bookedtrips-next-p">Från: Nygatan 10, Örebro</p>
+                            <p class="bookedtrips-next-p">Till: Paprikagatan 18, Örebro</p>
+                            <p class="bookedtrips-last-p">Krav på resan: Plats att ta med rollator</p>
+                        </div>
+                        <div>
+                            <button onclick="window.location.href='changetrip2.html'" class="bookedtrips-btn">Ändra
+                                resa<i class="fa-solid fa-rotate"></i></button>
+                            <button onclick="window.location.href='canceltrip2.html'" class="bookedtrips-btn">Avboka
+                                resa<i class="fa-regular fa-trash-can"></i></button>
+                        </div>
+                    </section>
+                    <div class="sub-content print-btn">
+                        <button id="print-btn" onclick="alert('Skriver ut översikt...')">Skriv ut översikt<i
+                                class="fa-solid fa-print"></i></button>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <!-- Sidfot -->
+        <footer>
+            <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-solid fa-phone"></i></span>Kundtjänst: 019-21 00 00</li>
+                <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span>E-post:<a
+                        href="mailto:petra.ingemarsson@gmail.com">minfardtjanst@orebro.se</a></li>
+                <li><span class="fa-li"><i class="fa-solid fa-gear"></i></span>Ansvarig för webbplatsen: Örebro kommun
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

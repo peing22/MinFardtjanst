@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ändra resa</title>
+    <!-- Länkar in favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Länkar in style.css -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Länkar in teckensnitt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Länkar in ikon-kit -->
+    <script src="https://kit.fontawesome.com/b074591ff2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <!-- Sidhuvud -->
+            <header>
+                <!-- Logotyp -->
+                <a href="index.html" id="logo">
+                    <img src="images/logotyp.svg" alt="Logotyp för Min Färdtjänst" width="154" height="42">
+                </a>
+                <!-- Sökfält -->
+                <form action="#">
+                    <label for="search" id="label-search">Sök</label>
+                    <input type="text" id="search" name="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </form>
+                <!-- Knapp för att öppna hamburgermeny + WAI-ARIA -->
+                <button id="open-menu-btn" aria-expanded="false" aria-controls="nav-menu">Meny<i
+                        class="fa-solid fa-bars"></i></button>
+                <!-- Navigeringsmeny -->
+                <nav id="nav-menu">
+                    <!-- Stäng-knapp som visas om menyn är utfälld -->
+                    <button id="close-menu-btn">Stäng<i class="fa-solid fa-xmark"></i></button>
+                    <!-- Navigeringslänkar -->
+                    <ul>
+                        <li><a href="booking.html">Boka resa</a></li>
+                        <li><a href="bookedtrips.html">Mina bokade resor</a></li>
+                        <li><a href="info.html">Information om färdtjänst</a></li>
+                        <li><a href="accessibility.html">Tillgänglighetsredogörelse</a></li>
+                        <li><a href="index.html">Logga ut<i class="fa-solid fa-right-from-bracket"></i></a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- Brödsmulor -->
+            <nav aria-label="breadcrumb">
+                <ul class="breadcrumbs">
+                    <li><i class="fa-solid fa-house"></i><a href="index.html">Start</a></li>
+                    <li><a href="bookedtrips.html">Mina bokade resor</a></li>
+                    <li id="current-page">Ändra resa</li>
+                </ul>
+            </nav>
+            <!-- Huvudinnehåll -->
+            <main>
+                <!-- Bild -->
+                <picture id="road">
+                    <source type="image/webp" srcset="images/road600x338.webp" width="600" height="338">
+                    <img src="images/road600x338.jpg" alt="Landsväg i solnedgång" width="600" height="338">
+                </picture>
+                <!-- Bokningsformulär -->
+                <section class="content">
+                    <h1>Ändra resa</h1>
+                    <form action="confirmchange.html" class="sub-content" id="grid-container-booking">
+                        <div id="item1">
+                            <label for="starting-point" class="heavy"><i class="fa-solid fa-location-dot"></i>Från
+                                adress:</label>
+                            <br>
+                            <input type="text" id="starting-point" name="starting-point"
+                                placeholder="Paprikagatan 18, Örebro">
+                        </div>
+                        <div id="item2">
+                            <label for="end-point" class="heavy"><i class="fa-solid fa-location-dot"></i>Till
+                                adress:</label>
+                            <br>
+                            <input type="text" id="end-point" name="end-point" placeholder="Nygatan 10, Örebro">
+                        </div>
+                        <div id="item3">
+                            <label for="date-leave" class="heavy"><i class="fa-solid fa-calendar-days"></i>Jag vill
+                                åka
+                                datum:</label>
+                            <input type="date" id="date-leave" name="date-to-leave" value="2023-01-16">
+                        </div>
+                        <div id="item4">
+                            <label for="time-leave" class="heavy"><i class="fa-solid fa-clock"></i>Jag vill åka
+                                klockan:</label>
+                            <input type="time" id="time-leave" name="time-to-leave" value="10:00">
+                        </div>
+                        <div id="item5">
+                            <!-- WAI-ARIA för knappen -->
+                            <button type="button" onclick="toggleBtn()" id="toggle-return-text" class="toggle-change" aria-expanded="false" aria-controls="trip-back">+
+                                Lägg till
+                                återresa</button>
+                        </div>
+                        <div id="trip-back" style="display: none;">
+                            <label for="date-back" class="heavy">Jag vill åka tillbaka datum:</label>
+                            <input type="date" id="date-back" name="date-back">
+                            <label for="time-back" class="heavy">Jag vill åka tillbaka klockan:</label>
+                            <input type="time" id="time-back" name="time-back">
+                        </div>
+                        <fieldset id="item7">
+                            <legend class="heavy">Krav på resan:</legend>
+                            <input type="checkbox" id="rollator" name="rollator" checked>
+                            <label for="rollator">Plats att ta med rollator</label>
+                            <br>
+                            <input type="checkbox" id="rullstol" name="rullstol">
+                            <label for="rullstol">Plats att ta med rullstol</label>
+                            <br>
+                            <input type="checkbox" id="person-i-rullstol" name="person-i-rullstol">
+                            <label for="person-i-rullstol">Fordon anpassat för resande i rullstol</label>
+                            <br>
+                            <input type="checkbox" id="ledsagare" name="ledsagare">
+                            <label for="ledsagare">Ledsagare åker med</label>
+                            <br>
+                            <input type="checkbox" id="medresenar" name="medresenar">
+                            <label for="medresenar">Medresenär åker med</label>
+                            <br>
+                        </fieldset>
+                        <div id="item8">
+                            <label for="iterate" class="heavy">Upprepa denna resa:</label>
+                            <br>
+                            <select id="iterate" name="iterate">
+                                <option value>Nej</option>
+                                <option value>Samma tid varje dag</option>
+                                <option value>Samma tid varje vardag (helgfria dagar)</option>
+                                <option value>Samma veckodag och tid varje vecka</option>
+                                <option value>Samma veckodag och tid varannan vecka</option>
+                                <option value>Samma veckodag och tid var tredje vecka</option>
+                                <option value>Samma veckodag och tid var fjärde vecka</option>
+                            </select>
+                            <br>
+                            <button type="submit" id="make-this-booking">Ändra resa<i
+                                    class="fa-solid fa-rotate"></i></button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+        <!-- Sidfot -->
+        <footer>
+            <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-solid fa-phone"></i></span>Kundtjänst: 019-21 00 00</li>
+                <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span>E-post:<a
+                        href="mailto:petra.ingemarsson@gmail.com">minfardtjanst@orebro.se</a></li>
+                <li><span class="fa-li"><i class="fa-solid fa-gear"></i></span>Ansvarig för webbplatsen: Örebro kommun
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <!-- Länkar in favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Länkar in style.css -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Länkar in teckensnitt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Länkar in ikon-kit -->
+    <script src="https://kit.fontawesome.com/b074591ff2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <!-- Sidhuvud -->
+            <header>
+                <!-- Logotyp -->
+                <a href="index.html" id="logo">
+                    <img src="images/logotyp.svg" alt="Logotyp för Min Färdtjänst" width="154" height="42">
+                </a>
+                <!-- Sökfält -->
+                <form action="#">
+                    <label for="search" id="label-search">Sök</label>
+                    <input type="text" id="search" name="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </form>
+                <!-- Knapp för att öppna hamburgermeny + WAI-ARIA -->
+                <button id="open-menu-btn" aria-expanded="false" aria-controls="nav-menu">Meny<i
+                        class="fa-solid fa-bars"></i></button>
+                <!-- Navigeringsmeny -->
+                <nav id="nav-menu">
+                    <!-- Stäng-knapp som visas om menyn är utfälld -->
+                    <button id="close-menu-btn">Stäng<i class="fa-solid fa-xmark"></i></button>
+                    <!-- Navigeringslänkar -->
+                    <ul>
+                        <li><a href="booking.html">Boka resa</a></li>
+                        <li><a href="bookedtrips.html">Mina bokade resor</a></li>
+                        <li><a href="info.html">Information om färdtjänst</a></li>
+                        <li><a href="accessibility.html">Tillgänglighetsredogörelse</a></li>
+                        <li><a href="index.html">Logga ut<i class="fa-solid fa-right-from-bracket"></i></a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- Brödsmulor -->
+            <nav aria-label="breadcrumb">
+                <ul class="breadcrumbs">
+                    <li><i class="fa-solid fa-house"></i><a href="index.html">Start</a></li>
+                    <li id="current-page">Information om färdtjänst</li>
+                </ul>
+            </nav>
+            <!-- Huvudinnehåll -->
+            <main>
+                <!-- Bild -->
+                <picture id="road">
+                    <source type="image/webp" srcset="images/road600x338.webp" width="600" height="338">
+                    <img src="images/road600x338.jpg" alt="Landsväg i solnedgång" width="600" height="338">
+                </picture>
+                <!-- Information om färdtjänst -->
+                <article class="content">
+                    <h1>Information om färdtjänst</h1>
+                    <div class="sub-content">
+                        <p class="first-p">Färdtjänst är en form av kollektiv&shy;trafik anpassad för dig som har en
+                            funktions&shy;ned&shy;sättning
+                            eller särskilda behov. Färd&shy;tjänsten finns till för att du ska kunna ta dig till olika
+                            platser även om du inte kan använda dig av vanlig kollektiv&shy;trafik såsom bussar och tåg.
+                            Du
+                            som har ett giltigt färdtjänst&shy;till&shy;stånd kan resa med färd&shy;tjänst.</p>
+                        <section>
+                            <h2 class="h2">När kan jag resa?</h2>
+                            <p class="next-p">Du kan resa på samma tider som den linje&shy;lagda kollektiv&shy;trafiken,
+                                det vill säga söndag
+                                till torsdag mellan klockan 05.30-24.00 och fredag till lördag mellan klockan
+                                05.30-02.00.
+                            </p>
+                        </section>
+                        <section>
+                            <h2 class="h2">Hur lång restid ska jag räkna med?</h2>
+                            <p class="next-p">Vi planerar alla våra färd&shy;tjänst&shy;resor för att så många som
+                                möjligt ska kunna sam&shy;åka.
+                                Därför kan en resa ta längre tid än vid färd med egen bil. Om du har en tid att passa
+                                måste du räkna med att resan kan ta dubbelt så lång tid jämfört med en resa i
+                                egen bil.
+                            </p>
+                        </section>
+                        <section>
+                            <h2 class="h2">Boka en resa</h2>
+                            <p class="next-p">Du kan boka din färd&shy;tjänst&shy;resa <a href="booking.html">via
+                                    denna webb&shy;tjänst</a> eller genom att ringa kund&shy;tjänst på 019-21 00 00.
+                                Boka din resa
+                                i god tid, gärna dagen innan.</p>
+                        </section>
+                        <section>
+                            <h2 class="h2">Ändra eller avboka en resa</h2>
+                            <p class="next-p">Via <a href="bookedtrips.html">Mina bokade resor</a> kan du ändra och
+                                av&shy;boka dina resor
+                                snabbt och enkelt. Du kan även ringa kund&shy;tjänst på 019-21 00 00 om du vill ändra
+                                eller
+                                av&shy;boka en resa.</p>
+                        </section>
+                        <section>
+                            <h2 class="h2">Hjälpmedel och bagage</h2>
+                            <p class="next-p">Om du behöver får du ta med dig två hjälp&shy;medel för förflyttning och
+                                två väskor på resan.
+                                När du bokar din resa är det viktigt att du upp&shy;ger vilken typ av hjälp&shy;medel du
+                                behöver
+                                ta med dig.</p>
+                        </section>
+                        <section>
+                            <h2 class="h2">Resa sittande i rullstol</h2>
+                            <p class="next-p" id="before-ul">Om du behöver resa sittande i rull&shy;stol måste du</p>
+                            <ul id="info-ul">
+                                <li>kontrollera att din rull&shy;stol är god&shy;känd för resan</li>
+                                <li>markera fästpunkter för spänn&shy;band på rull&shy;stolen</li>
+                                <li>uppge vid bokning att du reser sittande i rull&shy;stol.</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2 class="h2">Ledsagare och medresenär</h2>
+                            <p class="next-p info-last-p">Det är möjligt för dig att ta med en led&shy;sagare och/eller
+                                en med&shy;resenär på resan.
+                                Led&shy;sagaren och med&shy;resenären stiger på och av på samma adresser som du. När du
+                                bokar din
+                                resa är det viktigt att du upp&shy;ger om en led&shy;sagare och/eller med&shy;resenär
+                                ska åka med.
+                            </p>
+                        </section>
+                    </div>
+                </article>
+            </main>
+        </div>
+        <!-- Sidfot -->
+        <footer>
+            <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-solid fa-phone"></i></span>Kundtjänst: 019-21 00 00</li>
+                <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span>E-post:<a
+                        href="mailto:petra.ingemarsson@gmail.com">minfardtjanst@orebro.se</a></li>
+                <li><span class="fa-li"><i class="fa-solid fa-gear"></i></span>Ansvarig för webbplatsen: Örebro kommun
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
